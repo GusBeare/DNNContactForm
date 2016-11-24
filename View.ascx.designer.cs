@@ -40,6 +40,24 @@ namespace gus.Modules.DNNContactFormModule {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorName;
         
         /// <summary>
+        /// txtComment control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtComment;
+        
+        /// <summary>
+        /// RequiredFieldValidatorComment control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorComment;
+        
+        /// <summary>
         /// txtEmail control.
         /// </summary>
         /// <remarks>

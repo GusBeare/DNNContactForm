@@ -1,22 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="View.ascx.cs" Inherits="gus.Modules.DNNContactFormModule.View" %>
 
 
-
-<div class="row">
-        <div class="col-sm-12">
-         <div id="ValidationSummarySection">
-                <asp:ValidationSummary
-                    runat="server"
-	                resourcekey="ValidationSummaryContactForm" 
-                    ShowMessageBox="false" 
-                    DisplayMode="BulletList" 
-                    ShowSummary="true" 
-                    ValidationGroup="ValSummary"
-	                CssClass="dnnFormMessage dnnFormValidationSummary"/>
-            </div>
-        </div>
-</div>
-
 <div class="row">
         <div class="col-sm-9">
             
@@ -27,16 +11,21 @@
                     runat="server"
                     ControlToValidate="txtName"
                     EnableClientScript="true"
-                    ValidationGroup="ValSummary"
                     SetFocusOnError="true"
-                    Text="*"
-                    Display="None"
+                    Text="Name is required"
                     ClientIDMode="Static"></asp:RequiredFieldValidator>
             </div>
 
             <div class="form-group">
-                <label for="Comment">Comment</label>
-                <textarea class="form-control" cols="30" rows="8" id="Comment" form="ContactForm" tabindex="2" name="Comment"></textarea>
+                <asp:Label AssociatedControlID="txtComment" runat="server">Comment</asp:Label>
+                <asp:TextBox class="form-control" cols="30" rows="8" id="txtComment" tabindex="2" name="txtComment" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidatorComment"
+                    runat="server"
+                    ControlToValidate="txtComment"
+                    EnableClientScript="true"
+                    SetFocusOnError="true"
+                    Text="Comment is required"
+                    ClientIDMode="Static"></asp:RequiredFieldValidator>
             </div>
 
             <div class="form-group">
@@ -46,9 +35,8 @@
                     runat="server"
                     ControlToValidate="txtEmail"
                     EnableClientScript="true"
-                    ValidationGroup="ValSummary"
                     SetFocusOnError="true"
-                    Text="*"
+                    Text="Valid Email Address is required"
                     Display="None"
                     ClientIDMode="Static"></asp:RequiredFieldValidator>
               
