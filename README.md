@@ -1,2 +1,2 @@
 # DNNContactForm
-Contact form for DNN (Dotnetnuke)
+Contact Form for DNN
