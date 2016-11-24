@@ -1,0 +1,62 @@
+﻿<dotnetnuke type="ResourceFile" version="5.0">
+  <files>
+    <file>
+      <path />
+      <name>Edit.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>License.txt</name>
+    </file>
+    <file>
+      <path />
+      <name>module.css</name>
+    </file>
+    <file>
+      <path />
+      <name>ReleaseNotes.txt</name>
+    </file>
+    <file>
+      <path />
+      <name>Settings.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>View.ascx</name>
+    </file>
+    <file>
+      <path>App_LocalResources/</path>
+      <name>Edit.ascx.resx</name>
+    </file>
+    <file>
+      <path>App_LocalResources/</path>
+      <name>Settings.ascx.resx</name>
+    </file>
+    <file>
+      <path>App_LocalResources/</path>
+      <name>View.ascx.resx</name>
+    </file>
+    <file>
+      <path>App_LocalResources/</path>
+      <name>View.ascx.resx</name>
+    </file>
+    <file>
+      <path>images/</path>
+      <name>wilf.jpg</name>
+    </file>
+    <file>
+      <path>bin/</path>
+      <name>Simple.Data.dll</name>
+    </file>
+    <file>
+      <path>bin/</path>
+      <name>Simple.Data.Ado.dll</name>
+    </file>
+    <file>
+      <path>bin/</path>
+      <name>Simple.Data.SqlServer.dll</name>
+    </file>
+    
+    
+  </files>
+</dotnetnuke>

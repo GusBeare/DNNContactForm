@@ -60,5 +60,10 @@ namespace gus.Modules.DNNContactFormModule
                 return actions;
             }
         }
+
+        protected void btnSave_OnClick(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

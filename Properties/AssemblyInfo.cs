@@ -5,9 +5,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("DNNContactFormModule")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Contact Form Module")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Caraway Design")]
 [assembly: AssemblyProduct("DNNContactFormModule")]
 [assembly: AssemblyCopyright("Copyright © 2016")]
 [assembly: AssemblyTrademark("")]
@@ -30,5 +30,5 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("01.00.01.0")]
-[assembly: AssemblyFileVersion("01.00.01.0")]
+[assembly: AssemblyVersion("01.00.03.0")]
+[assembly: AssemblyFileVersion("01.00.03.0")]
