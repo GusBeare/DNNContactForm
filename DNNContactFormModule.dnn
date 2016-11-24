@@ -3,7 +3,7 @@
     <package name="DNNContactFormModule" type="Module" version="01.00.01">
       <friendlyName>DNNContactFormModule</friendlyName>
       <description>CarawayDesign.com DNNContactFormModule module</description>
-      <iconFile>~/Images/icon_extensions_32px.png</iconFile>
+      <iconFile>~/images/wilf.jpg</iconFile>
       <owner>
         <name>CarawayDesign.com</name>
         <organization>CarawayDesign.com</organization>
@@ -107,6 +107,18 @@
           <assemblies>
             <assembly>
               <name>DNNContactFormModule.dll</name>
+              <path>bin</path>
+            </assembly>
+            <assembly>
+              <name>Simple.Data.dll</name>
+              <path>bin</path>
+            </assembly>
+            <assembly>
+              <name>Simple.Data.Ado.dll</name>
+              <path>bin</path>
+            </assembly>
+            <assembly>
+              <name>Simple.Data.SqlServer.dll</name>
               <path>bin</path>
             </assembly>
           </assemblies>

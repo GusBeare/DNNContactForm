@@ -51,6 +51,18 @@
       <HintPath>..\..\bin\Microsoft.ApplicationBlocks.Data.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Simple.Data, Version=0.19.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Simple.Data.Core.0.19.0.0\lib\net40\Simple.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Simple.Data.Ado, Version=0.19.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Simple.Data.Ado.0.19.0.0\lib\net40\Simple.Data.Ado.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Simple.Data.SqlServer, Version=0.19.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Simple.Data.SqlServer.0.19.0.0\lib\net40\Simple.Data.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -102,10 +114,14 @@
     <Content Include="Documentation\Documentation.css" />
     <Content Include="Documentation\Documentation.html" />
     <Content Include="Edit.ascx" />
+    <Content Include="images\wilf.jpg" />
     <Content Include="License.txt" />
     <Content Include="module.css" />
     <Content Include="packages\MSBuildTasks.1.5.0.214\tools\MSBuild.Community.Tasks.dll" />
     <Content Include="packages\MSBuildTasks.1.5.0.214\tools\MSBuild.Community.Tasks.xml" />
+    <Content Include="packages\Simple.Data.Ado.0.19.0.0\lib\net40\Simple.Data.Ado.dll" />
+    <Content Include="packages\Simple.Data.Core.0.19.0.0\lib\net40\Simple.Data.dll" />
+    <Content Include="packages\Simple.Data.SqlServer.0.19.0.0\lib\net40\Simple.Data.SqlServer.dll" />
     <Content Include="ReleaseNotes.txt" />
     <Content Include="Settings.ascx" />
     <Content Include="View.ascx" />
@@ -138,10 +154,14 @@
     <Content Include="packages\MSBuildTasks.1.5.0.214\MSBuildTasks.1.5.0.214.nupkg" />
     <Content Include="packages\MSBuildTasks.1.5.0.214\tools\MSBuild.Community.Tasks.Targets" />
     <Content Include="LICENSE" />
+    <Content Include=".gitignore" />
     <None Include="packages\MSBuildTasks.1.5.0.214\tools\MSBuild.Community.Tasks.xsd">
       <SubType>Designer</SubType>
     </None>
     <Content Include="README.md" />
+    <Content Include="packages\Simple.Data.Ado.0.19.0.0\Simple.Data.Ado.0.19.0.0.nupkg" />
+    <Content Include="packages\Simple.Data.Core.0.19.0.0\Simple.Data.Core.0.19.0.0.nupkg" />
+    <Content Include="packages\Simple.Data.SqlServer.0.19.0.0\Simple.Data.SqlServer.0.19.0.0.nupkg" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
