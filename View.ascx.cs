@@ -19,7 +19,7 @@ namespace gus.Modules.DNNContactFormModule
                 // add the recaptcha key from module settings
                 if (Settings.Contains("GoogleRecaptchaCode"))
                 {
-                    var key = Settings["GoogleRecaptchaCode"].ToString(); //  6Lfe_CATAAAAAFmKjVjdr5BwYsVXHu7hxQgRH0Bz
+                    var key = Settings["GoogleRecaptchaCode"].ToString(); 
                     DivRecaptcha.Attributes.Add("data-sitekey", key);
 
                 }
