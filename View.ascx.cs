@@ -13,6 +13,10 @@ namespace gus.Modules.DNNContactFormModule
         {
             try
             {
+                // collect the data from the form and validate
+
+
+
 
             }
             catch (Exception exc) //Module failed to load
