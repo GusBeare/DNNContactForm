@@ -11,10 +11,23 @@ namespace gus.Modules.DNNContactFormModule
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            if (IsPostBack){return;}
+
             try
             {
-                // collect the data from the form and validate
+                // add the recaptcha key from module settings
+                if (Settings.Contains("GoogleRecaptchaCode"))
+                {
+                    var key = Settings["GoogleRecaptchaCode"].ToString(); //  6Lfe_CATAAAAAFmKjVjdr5BwYsVXHu7hxQgRH0Bz
+                    DivRecaptcha.Attributes.Add("data-sitekey", key);
 
+                }
+              
+                // collect the data from the form and validate
+                var name = txtName.Text;
+                var email = txtEmail.Text;
+                var comments = txtComment;
 
 
 
