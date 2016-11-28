@@ -44,7 +44,7 @@ namespace gus.Modules.DNNContactFormModule
                 // module settings are used so that these settings are the same for all instances of the module
                 modules.UpdateModuleSetting(ModuleId, "GoogleRecaptchaCode", txtGoogleRecaptchaCode.Text);
                 modules.UpdateModuleSetting(ModuleId, "ContactUsTargetEmailAddress", txtTargetEmailAddress.Text);
-                modules.UpdateModuleSetting(ModuleId, "ContactUsSuccessPageUrl", txtTargetEmailAddress.Text);
+                modules.UpdateModuleSetting(ModuleId, "ContactUsSuccessPageUrl", txtSuccessPageUrl.Text);
             }
             catch (Exception exc) //Module failed to load
             {
