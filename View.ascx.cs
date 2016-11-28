@@ -38,7 +38,7 @@ namespace gus.Modules.DNNContactFormModule
 
         protected void btnSave_OnClick(object sender, EventArgs e)
         {
-            // collect the data from the form and validate
+           
             var name = txtName.Text;
             var email = txtEmail.Text;
             var comments = txtComment.Text;
