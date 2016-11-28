@@ -67,6 +67,7 @@
     <Reference Include="System.Configuration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Code\EmailClass.cs" />
     <Compile Include="Components\FeatureController.cs" />
     <Compile Include="Data\DataProvider.cs" />
     <Compile Include="DNNContactFormModuleModuleBase.cs">

@@ -4,6 +4,7 @@ using DotNetNuke.Services.Exceptions;
 using DotNetNuke.Entities.Modules;
 using DotNetNuke.Entities.Modules.Actions;
 using DotNetNuke.Services.Localization;
+using gus.Modules.DNNContactFormModule.Code;
 
 namespace gus.Modules.DNNContactFormModule
 {
@@ -50,9 +51,21 @@ namespace gus.Modules.DNNContactFormModule
             }
             else
             {
-                if (!Settings.Contains("ContactUsSuccessPageUrl")) return;
-                var SuccessPage = Settings["ContactUsSuccessPageUrl"].ToString();
-                Response.Redirect(SuccessPage);
+                // Send the email
+                EmailClass.SendDNNEmail("gus@carawaydesign.com", email, comments, "Email from web site Contact Form");
+
+                // redirect if the setting is there
+                if (!Settings.Contains("ContactUsSuccessPageUrl"))
+                {
+                    var SuccessPage = Settings["ContactUsSuccessPageUrl"].ToString();
+                    Response.Redirect(SuccessPage);
+                }
+                else
+                {
+                    // hide everything on the form and show a success message
+                }
+                
+                
             }
 
         }
