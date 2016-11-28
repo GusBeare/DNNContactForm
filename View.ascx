@@ -41,4 +41,31 @@
 
         <div class="col-sm-3"></div>
 </div>
+<hr/>
+<div class="row">
+    <div class="col-sm-9">
+        <div class="alert alert-danger" id="Response" style="display:none"></div>
+    </div>
+    <div class="col-sm-3"></div>
 
+</div>
+
+<script>
+    function validateRecaptcha() {
+        var response = grecaptcha.getResponse();
+        if (response.length === 0) {
+           // if user did not check the re-captcha then show a message and stop form submit
+            $('#Response').html("Please confirm you are not a robot by clicking on the box above!");
+            $("#Response").show();
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    // when the form is submitted, validate the Recaptcha
+    $('#Form').submit(function () {
+        return validateRecaptcha();
+    });
+
+</script>
