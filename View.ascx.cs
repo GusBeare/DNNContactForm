@@ -23,11 +23,11 @@ namespace gus.Modules.DNNContactFormModule
                     DivRecaptcha.Attributes.Add("data-sitekey", key);
 
                 }
-              
-                // collect the data from the form and validate
-                var name = txtName.Text;
-                var email = txtEmail.Text;
-                var comments = txtComment;
+
+                txtName.Attributes.Add("required data-errormessage-value-missing", "Must enter your name!");
+                txtEmail.Attributes.Add("required data-errormessage-value-missing","Must enter your email address!");
+                txtComment.Attributes.Add("required data-errormessage-value-missing","Must enter a message!");
+               
 
 
 
@@ -36,6 +36,21 @@ namespace gus.Modules.DNNContactFormModule
             {
                 Exceptions.ProcessModuleLoadException(this, exc);
             }
+        }
+
+        protected void btnSave_OnClick(object sender, EventArgs e)
+        {
+            // collect the data from the form and validate
+            var name = txtName.Text;
+            var email = txtEmail.Text;
+            var comments = txtComment.Text;
+
+            // just make sure someone hasn't bypassed the in browser validation somehow
+            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(comments))
+            {
+                PanelServerError.Visible = true;
+            }
+
         }
 
         public ModuleActionCollection ModuleActions
@@ -53,9 +68,5 @@ namespace gus.Modules.DNNContactFormModule
             }
         }
 
-        protected void btnSave_OnClick(object sender, EventArgs e)
-        {
-            // throw new NotImplementedException();
-        }
     }
 }
