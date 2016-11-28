@@ -24,12 +24,10 @@ namespace gus.Modules.DNNContactFormModule
 
                 }
 
+                // add attributes for HTML5 required fields
                 txtName.Attributes.Add("required data-errormessage-value-missing", "Must enter your name!");
                 txtEmail.Attributes.Add("required data-errormessage-value-missing","Must enter your email address!");
                 txtComment.Attributes.Add("required data-errormessage-value-missing","Must enter a message!");
-               
-
-
 
             }
             catch (Exception exc) //Module failed to load
@@ -49,6 +47,12 @@ namespace gus.Modules.DNNContactFormModule
             if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(comments))
             {
                 PanelServerError.Visible = true;
+            }
+            else
+            {
+                if (!Settings.Contains("ContactUsSuccessPageUrl")) return;
+                var SuccessPage = Settings["ContactUsSuccessPageUrl"].ToString();
+                Response.Redirect(SuccessPage);
             }
 
         }

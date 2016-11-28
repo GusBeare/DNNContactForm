@@ -47,5 +47,23 @@ namespace gus.Modules.DNNContactFormModule {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtTargetEmailAddress;
+        
+        /// <summary>
+        /// lblSuccessPageUrl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UserControl lblSuccessPageUrl;
+        
+        /// <summary>
+        /// txtSuccessPageUrl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSuccessPageUrl;
     }
 }

@@ -15,6 +15,10 @@
             <dnn:label ID="lblTargetEmailAddress" runat="server" />
             <asp:TextBox ID="txtTargetEmailAddress" runat="server" />
         </div>
+          <div class="dnnFormItem">
+            <dnn:label ID="lblSuccessPageUrl" runat="server" />
+            <asp:TextBox ID="txtSuccessPageUrl" runat="server" />
+        </div>
     </fieldset>
 
 

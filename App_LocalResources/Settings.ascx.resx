@@ -123,11 +123,8 @@
   <data name="lblGoogleRecaptchaCode.Text" xml:space="preserve">
     <value>Google Re-captcha Code</value>
   </data>
-  <data name="lblSetting1.Help" xml:space="preserve">
-    <value>Put your value for Setting 1 here.</value>
-  </data>
-  <data name="lblSetting2.Help" xml:space="preserve">
-    <value>Put your value for Setting 2 here.</value>
+  <data name="lblSuccessPageUrl.Text" xml:space="preserve">
+    <value>Contact Form Submit Success Page</value>
   </data>
   <data name="lblTargetEmailAddress.Text" xml:space="preserve">
     <value>Target Email Address</value>
