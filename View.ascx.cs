@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Web;
 using DotNetNuke.Security;
 using DotNetNuke.Services.Exceptions;
 using DotNetNuke.Entities.Modules;
@@ -43,6 +44,11 @@ namespace gus.Modules.DNNContactFormModule
             var name = txtName.Text;
             var email = txtEmail.Text;
             var comments = txtComment.Text;
+
+            var CallerIp = HttpContext.Current.Request.UserHostAddress;
+            var CallerAgent = HttpContext.Current.Request.UserAgent;
+            var CalledUrl = HttpContext.Current.Request.Url.OriginalString;
+
 
             // just make sure someone hasn't bypassed the in browser validation somehow
             if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(comments))

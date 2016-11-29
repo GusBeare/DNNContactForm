@@ -118,6 +118,7 @@
     <Content Include="ReleaseNotes.txt" />
     <Content Include="Scripts\civem-0.0.7.js" />
     <Content Include="Settings.ascx" />
+    <Content Include="SQL\tbl_ContactUsFormLog.sql" />
     <Content Include="View.ascx" />
   </ItemGroup>
   <ItemGroup>
@@ -156,9 +157,7 @@
     <Content Include="packages\Simple.Data.SqlServer.0.19.0.0\Simple.Data.SqlServer.0.19.0.0.nupkg" />
     <Content Include="Resources.zip.manifest" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="SQL\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
