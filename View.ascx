@@ -5,7 +5,11 @@
 
 <dnn:DnnJsInclude FilePath="/DesktopModules/DNNContactFormModule/Scripts/civem-0.0.7.js" runat="server"/>
 
-<div class="row">
+
+<!-- Shows the Contact Us form -->
+<asp:Panel id="PanelContactUsForm" Visible="True" runat="server">
+    
+    <div class="row">
         <div class="col-sm-9">
             
             <div class="form-group">
@@ -49,6 +53,14 @@
     <div class="col-sm-3"></div>
 
 </div>
+
+</asp:Panel>
+
+<!-- Shows if there is no redirect page configured in settings -->
+<asp:Panel id="PanelContactUsFormSubmitted" Visible="False" runat="server">
+    <asp:Label id="lblFormSubmittedMessage" resourcekey="lblFormSubmittedMessage" runat="server"></asp:Label>
+</asp:Panel>
+
 
 <script>
     function validateRecaptcha() {

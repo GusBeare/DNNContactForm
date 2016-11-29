@@ -55,14 +55,16 @@ namespace gus.Modules.DNNContactFormModule
                 EmailClass.SendDNNEmail("gus@carawaydesign.com", email, comments, "Email from web site Contact Form");
 
                 // redirect if the setting is there
-                if (!Settings.Contains("ContactUsSuccessPageUrl"))
+                if (Settings.Contains("ContactUsSuccessPageUrl"))
                 {
                     var SuccessPage = Settings["ContactUsSuccessPageUrl"].ToString();
                     Response.Redirect(SuccessPage);
                 }
                 else
                 {
-                    // hide everything on the form and show a success message
+                    // otherwise, hide the form and show a success message
+                    PanelContactUsForm.Visible = false;
+                    PanelContactUsFormSubmitted.Visible = true;
                 }
                 
                 

@@ -13,6 +13,15 @@ namespace gus.Modules.DNNContactFormModule {
     public partial class View {
         
         /// <summary>
+        /// PanelContactUsForm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel PanelContactUsForm;
+        
+        /// <summary>
         /// lblName control.
         /// </summary>
         /// <remarks>
@@ -74,5 +83,23 @@ namespace gus.Modules.DNNContactFormModule {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl DivRecaptcha;
+        
+        /// <summary>
+        /// PanelContactUsFormSubmitted control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel PanelContactUsFormSubmitted;
+        
+        /// <summary>
+        /// lblFormSubmittedMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblFormSubmittedMessage;
     }
 }
