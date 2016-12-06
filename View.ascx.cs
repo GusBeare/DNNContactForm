@@ -58,7 +58,7 @@ namespace gus.Modules.DNNContactFormModule
             else
             {
                 // Send the email
-                EmailClass.SendDNNEmail("gus@carawaydesign.com", email, comments, "Email from web site Contact Form");
+                EmailClass.SendDNNEmail("john@johndoe.com", email, comments, "Enquiry from Qadisha Oil Web Site");
 
                 // redirect if the setting is there
                 if (Settings.Contains("ContactUsSuccessPageUrl"))
