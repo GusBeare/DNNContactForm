@@ -1,6 +1,6 @@
 <dotnetnuke type="Package" version="5.0">
   <packages>
-    <package name="DNNContactFormModule" type="Module" version="01.00.06">
+    <package name="DNNContactFormModule" type="Module" version="01.00.07">
       <friendlyName>DNNContactFormModule</friendlyName>
       <description>CarawayDesign.com DNNContactFormModule module</description>
       <iconFile>images/wilf.jpg</iconFile>

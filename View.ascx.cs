@@ -29,6 +29,7 @@ namespace gus.Modules.DNNContactFormModule
 
                 // add attributes for HTML5 required fields
                 txtName.Attributes.Add("required data-errormessage-value-missing", "Must enter your name!");
+                txtPhone.Attributes.Add("required data-errormessage-value-missing", "Must enter your phone number!");
                 txtEmail.Attributes.Add("required data-errormessage-value-missing","Must enter your email address!");
                 txtComment.Attributes.Add("required data-errormessage-value-missing","Must enter a message!");
 
@@ -45,6 +46,7 @@ namespace gus.Modules.DNNContactFormModule
             var name = txtName.Text;
             var EnquirerEmail = txtEmail.Text;
             var comments = txtComment.Text;
+            var phone = txtPhone.Text;
 
             var CallerIp = HttpContext.Current.Request.UserHostAddress;
             var CallerAgent = HttpContext.Current.Request.UserAgent;
@@ -52,7 +54,7 @@ namespace gus.Modules.DNNContactFormModule
 
 
             // just make sure someone hasn't bypassed the in browser validation somehow
-            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(EnquirerEmail) || string.IsNullOrEmpty(comments))
+            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(EnquirerEmail) || string.IsNullOrEmpty(comments) || string.IsNullOrEmpty(phone))
             {
                 PanelServerError.Visible = true;
             }
@@ -70,6 +72,7 @@ namespace gus.Modules.DNNContactFormModule
                 var body = new StringBuilder();
                 body.AppendLine("<p><strong>Name: </strong>" + name + "</p>");
                 body.AppendLine("<p><strong>Email: </strong>" + EnquirerEmail + "</p>");
+                body.AppendLine("<p><strong>Phone: </strong>" + phone + "</p>");
                 body.AppendLine("<hr>");
                 body.AppendLine("<p>" + comments + "</p>");
 

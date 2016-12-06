@@ -16,15 +16,20 @@
                 <asp:Label id="lblName" AssociatedControlID="txtName" runat="server">Name</asp:Label>
                 <asp:TextBox id="txtName" class="form-control" placeholder="Enter your name here..." title="Must enter your name" tabindex="1" runat="server"/>
             </div>
+            
+              <div class="form-group">
+                <asp:Label AssociatedControlID="txtEmail" runat="server">Email</asp:Label>
+                <asp:TextBox placeholder="Enter your email here.." class="form-control" id="txtEmail" name="Email" tabindex="2" TextMode="Email" title="Must enter your email address" runat="server"></asp:TextBox>
+            </div>
+            
+              <div class="form-group">
+                <asp:Label AssociatedControlID="txtPhone" runat="server">Phone</asp:Label>
+                <asp:TextBox placeholder="Enter your phone number here.." class="form-control" id="txtPhone" name="Phone" tabindex="3" TextMode="Phone" title="Must enter your phone number" runat="server"></asp:TextBox>
+            </div>
              
             <div class="form-group">
                 <asp:Label AssociatedControlID="txtComment" runat="server">Comment</asp:Label>
-                <asp:TextBox class="form-control" placeholder="Enter your enquiry here.." TextMode="MultiLine" cols="20" rows="6" id="txtComment" tabindex="2" name="txtComment" title="Must enter a message" runat="server"></asp:TextBox>
-            </div>
-            
-            <div class="form-group">
-                <asp:Label AssociatedControlID="txtEmail" runat="server">Email</asp:Label>
-                <asp:TextBox placeholder="Enter your email here.." class="form-control" id="txtEmail" name="Email" tabindex="3" TextMode="Email" title="Must enter your email address" runat="server"></asp:TextBox>
+                <asp:TextBox class="form-control" placeholder="Enter your enquiry here.." TextMode="MultiLine" cols="20" rows="6" id="txtComment" tabindex="4" name="txtComment" title="Must enter a message" runat="server"></asp:TextBox>
             </div>
             
             <div class="form-group">
