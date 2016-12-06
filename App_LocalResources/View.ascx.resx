@@ -120,6 +120,9 @@
   <data name="EditModule.Text" xml:space="preserve">
     <value>Edit Module</value>
   </data>
+  <data name="EmailSubject.Text" xml:space="preserve">
+    <value>Enquiry From web site:</value>
+  </data>
   <data name="lblFormSubmittedMessage.Text" xml:space="preserve">
     <value>Your message has been sent. Thank you!</value>
   </data>

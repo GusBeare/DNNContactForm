@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using System.Web;
 using DotNetNuke.Security;
 using DotNetNuke.Services.Exceptions;
@@ -42,7 +43,7 @@ namespace gus.Modules.DNNContactFormModule
         {
            
             var name = txtName.Text;
-            var email = txtEmail.Text;
+            var EnquirerEmail = txtEmail.Text;
             var comments = txtComment.Text;
 
             var CallerIp = HttpContext.Current.Request.UserHostAddress;
@@ -51,14 +52,30 @@ namespace gus.Modules.DNNContactFormModule
 
 
             // just make sure someone hasn't bypassed the in browser validation somehow
-            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(comments))
+            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(EnquirerEmail) || string.IsNullOrEmpty(comments))
             {
                 PanelServerError.Visible = true;
             }
             else
             {
-                // Send the email
-                EmailClass.SendDNNEmail("john@johndoe.com", email, comments, "Enquiry from Qadisha Oil Web Site");
+
+                // get the recipient email in settings (site admin)
+                var AdminEmail = Settings.Contains("ContactUsTargetEmailAddress") ? Settings["ContactUsTargetEmailAddress"].ToString() : "mybackupEmail.com";
+
+                // get the localised email subject
+                var alias = PortalAlias.HTTPAlias;
+                var sub = Localization.GetString("EmailSubject.Text", LocalResourceFile) + " " + alias;
+
+                // build the email body
+                var body = new StringBuilder();
+                body.AppendLine("<p><strong>Name: </strong>" + name + "</p>");
+                body.AppendLine("<p><strong>Email: </strong>" + EnquirerEmail + "</p>");
+                body.AppendLine("<hr>");
+                body.AppendLine("<p>" + comments + "</p>");
+
+                // in this instance the to and from email addresses are the same 
+                // since this is from the web site admin to the web site admin
+                EmailClass.SendDNNEmail(AdminEmail, AdminEmail, body.ToString(), sub);
 
                 // redirect if the setting is there
                 if (Settings.Contains("ContactUsSuccessPageUrl"))

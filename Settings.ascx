@@ -19,6 +19,7 @@
             <dnn:label ID="lblSuccessPageUrl" runat="server" />
             <asp:TextBox ID="txtSuccessPageUrl" runat="server" />
         </div>
+        
     </fieldset>
 
 
