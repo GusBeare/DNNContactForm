@@ -1,6 +1,6 @@
 # DNNContactForm
 
-## Bootstrap Contact Form Module for DNN in C#
+## Bootstrap Contact Form Module for DNN in C&#35;
 
 This is a Visual Studio project based on a Chris Hammond DNN template for version 7 and above.
 
