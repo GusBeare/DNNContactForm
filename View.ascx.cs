@@ -42,63 +42,73 @@ namespace gus.Modules.DNNContactFormModule
 
         protected void btnSubmit_OnClick(object sender, EventArgs e)
         {
-           
-            var name = txtName.Text;
-            var EnquirerEmail = txtEmail.Text;
-            var comments = txtComment.Text;
-            var phone = txtPhone.Text;
 
-            var CallerIp = HttpContext.Current.Request.UserHostAddress;
-            var CallerAgent = HttpContext.Current.Request.UserAgent;
-            var CalledUrl = HttpContext.Current.Request.Url.OriginalString;
-
-
-            // just make sure someone hasn't bypassed the in browser validation
-            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(EnquirerEmail) || string.IsNullOrEmpty(comments) || string.IsNullOrEmpty(phone))
+            try
             {
-                PanelServerError.Visible = true;
-            }
-            else
-            {
+                var name = txtName.Text;
+                var EnquirerEmail = txtEmail.Text;
+                var comments = txtComment.Text;
+                var phone = txtPhone.Text;
 
-                // get the recipient email in settings (site admin)
-                var AdminEmail = Settings.Contains("ContactUsTargetEmailAddress") ? Settings["ContactUsTargetEmailAddress"].ToString() : "mybackupEmail.com";
+                var CallerIp = HttpContext.Current.Request.UserHostAddress;
+                var CallerAgent = HttpContext.Current.Request.UserAgent;
+                var CalledUrl = HttpContext.Current.Request.Url.OriginalString;
 
-                // get the localised email subject
-                var alias = PortalAlias.HTTPAlias;
-                var sub = Localization.GetString("EmailSubject.Text", LocalResourceFile) + " " + alias;
 
-                // build the email body
-                var body = new StringBuilder();
-                body.AppendLine("<p><strong>Name: </strong>" + name + "</p>");
-                body.AppendLine("<p><strong>Email: </strong>" + EnquirerEmail + "</p>");
-                body.AppendLine("<p><strong>Phone: </strong>" + phone + "</p>");
-                body.AppendLine("<hr>");
-                body.AppendLine("<p>" + comments + "</p>");
-
-                // in this instance the to and from email addresses are the same 
-                // since this is from the web site admin to the web site admin
-                EmailClass.SendDNNEmail(AdminEmail, AdminEmail, body.ToString(), sub);
-
-                // log the enquiry to the DB.
-                DatabaseClass.InsertContactDetails(name,EnquirerEmail,phone,comments,CallerIp,CallerAgent);
-
-                // redirect if the setting is there
-                if (Settings.Contains("ContactUsSuccessPageUrl"))
+                // just make sure someone hasn't bypassed the in browser validation
+                if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(EnquirerEmail) || string.IsNullOrEmpty(comments) ||
+                    string.IsNullOrEmpty(phone))
                 {
-                    var SuccessPage = Settings["ContactUsSuccessPageUrl"].ToString();
-                    Response.Redirect(SuccessPage);
+                    PanelServerError.Visible = true;
                 }
                 else
                 {
-                    // otherwise, hide the form and show a success message
-                    PanelContactUsForm.Visible = false;
-                    PanelContactUsFormSubmitted.Visible = true;
-                }
-                
-                
-            }
 
+                    // get the recipient email in settings (site admin)
+                    var AdminEmail = Settings.Contains("ContactUsTargetEmailAddress")
+                        ? Settings["ContactUsTargetEmailAddress"].ToString()
+                        : "mybackupEmail.com";
+
+                    // get the localised email subject
+                    var alias = PortalAlias.HTTPAlias;
+                    var sub = Localization.GetString("EmailSubject.Text", LocalResourceFile) + " " + alias;
+
+                    // build the email body
+                    var body = new StringBuilder();
+                    body.AppendLine("<p><strong>Name: </strong>" + name + "</p>");
+                    body.AppendLine("<p><strong>Email: </strong>" + EnquirerEmail + "</p>");
+                    body.AppendLine("<p><strong>Phone: </strong>" + phone + "</p>");
+                    body.AppendLine("<hr>");
+                    body.AppendLine("<p>" + comments + "</p>");
+
+                    // in this instance the to and from email addresses are the same 
+                    // since this is from the web site admin to the web site admin
+                    EmailClass.SendDNNEmail(AdminEmail, AdminEmail, body.ToString(), sub);
+
+                    // log the enquiry to the DB.
+                    DatabaseClass.InsertContactDetails(name, EnquirerEmail, phone, comments, CallerIp, CallerAgent);
+
+                    // redirect if the setting is there
+                    if (Settings.Contains("ContactUsSuccessPageUrl"))
+                    {
+                        var SuccessPage = Settings["ContactUsSuccessPageUrl"].ToString();
+                        Response.Redirect(SuccessPage);
+                    }
+                    else
+                    {
+                        // otherwise, hide the form and show a success message
+                        PanelContactUsForm.Visible = false;
+                        PanelContactUsFormSubmitted.Visible = true;
+                    }
+
+
+                }
+
+            }
+            catch (Exception exc)
+            {
+                Exceptions.ProcessModuleLoadException(this, exc);
+            }
         }
 
         public ModuleActionCollection ModuleActions
