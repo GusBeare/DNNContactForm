@@ -40,7 +40,7 @@ namespace gus.Modules.DNNContactFormModule
             }
         }
 
-        protected void btnSave_OnClick(object sender, EventArgs e)
+        protected void btnSubmit_OnClick(object sender, EventArgs e)
         {
            
             var name = txtName.Text;
@@ -53,7 +53,7 @@ namespace gus.Modules.DNNContactFormModule
             var CalledUrl = HttpContext.Current.Request.Url.OriginalString;
 
 
-            // just make sure someone hasn't bypassed the in browser validation somehow
+            // just make sure someone hasn't bypassed the in browser validation
             if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(EnquirerEmail) || string.IsNullOrEmpty(comments) || string.IsNullOrEmpty(phone))
             {
                 PanelServerError.Visible = true;
@@ -79,6 +79,9 @@ namespace gus.Modules.DNNContactFormModule
                 // in this instance the to and from email addresses are the same 
                 // since this is from the web site admin to the web site admin
                 EmailClass.SendDNNEmail(AdminEmail, AdminEmail, body.ToString(), sub);
+
+                // log the enquiry to the DB.
+                DatabaseClass.InsertContactDetails(name,EnquirerEmail,phone,comments,CallerIp,CallerAgent);
 
                 // redirect if the setting is there
                 if (Settings.Contains("ContactUsSuccessPageUrl"))

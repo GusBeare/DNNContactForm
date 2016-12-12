@@ -33,7 +33,7 @@
             </div>
             
             <div class="form-group">
-                <asp:Button id="btnSave" OnClick="btnSave_OnClick" class="btn btn-primary" TabIndex="5" Text="Submit" runat="server"/>
+                <asp:Button id="btnSubmit" OnClick="btnSubmit_OnClick" class="btn btn-primary" TabIndex="5" Text="Submit" runat="server"/>
             </div>
             
             <div class="form-group">

@@ -52,6 +52,7 @@
       <HintPath>Included DLLs\DotNetNuke.Web.Client.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="Simple.Data, Version=0.19.0.0, Culture=neutral, processorArchitecture=MSIL">
       <Private>False</Private>
     </Reference>
@@ -68,6 +69,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Code\DatabaseClass.cs" />
     <Compile Include="Code\EmailClass.cs" />
     <Compile Include="Components\FeatureController.cs" />
     <Compile Include="Data\DataProvider.cs" />
@@ -119,7 +121,6 @@
     <Content Include="ReleaseNotes.txt" />
     <Content Include="Scripts\civem-0.0.7.js" />
     <Content Include="Settings.ascx" />
-    <Content Include="SQL\tbl_ContactUsFormLog.sql" />
     <Content Include="View.ascx" />
   </ItemGroup>
   <ItemGroup>
@@ -139,7 +140,7 @@
     <Content Include="App_LocalResources\Settings.ascx.resx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Providers\DataProviders\SqlDataProvider\00.00.01.SqlDataProvider" />
+    <Content Include="Providers\DataProviders\SqlDataProvider\01.00.08.SqlDataProvider" />
     <Content Include="Providers\DataProviders\SqlDataProvider\Uninstall.SqlDataProvider" />
   </ItemGroup>
   <ItemGroup>

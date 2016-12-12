@@ -1,6 +1,6 @@
 <dotnetnuke type="Package" version="5.0">
   <packages>
-    <package name="DNNContactFormModule" type="Module" version="01.00.07">
+    <package name="DNNContactFormModule" type="Module" version="01.00.08">
       <friendlyName>DNNContactFormModule</friendlyName>
       <description>CarawayDesign.com DNNContactFormModule module</description>
       <iconFile>images/wilf.jpg</iconFile>
@@ -23,8 +23,8 @@
             <basePath>DesktopModules\DNNContactFormModule</basePath>
             <script type="Install">
               <path>Providers\DataProviders\SqlDataProvider</path>
-              <name>00.00.01.SqlDataProvider</name>
-              <version>00.00.01</version>
+              <name>01.00.08.SqlDataProvider</name>
+              <version>01.00.08</version>
             </script>
             <script type="UnInstall">
               <path>Providers\DataProviders\SqlDataProvider</path>
