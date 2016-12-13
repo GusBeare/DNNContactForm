@@ -10,7 +10,7 @@ Once you have added the module to a page you can then go into the module setting
 address for the enquiries and a success page that you want the user directed to on successful submission e.g. `/Success`.  If you leave the success page
 blank the module will hide the form and show a success message on submit.
 
-
+[test image](images/wilf.jpg)
 
 Check the resources file `/App_localResources/View.ascx.resx` to edit some of the messages.
 
