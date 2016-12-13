@@ -4,7 +4,7 @@
 
 This is a Visual Studio project based on a Chris Hammond DNN template for version 7 and above.
 
-To get up and running quickly just build the solution in release mode and install the module using the .zip file creatd in the `/install` folder.
+To get up and running quickly just build the solution in release mode and install the module using the .zip file created in the `/install` folder.
 
 Once you have added the module to a page you can then go into the module settings and find the module specific settings for the DNNContactForm module. In there you can set a Google Recaptcha code, the recipient email
 address for the enquiries and a success page that you want the user directed to on successful submission e.g. `/Success`.  If you leave the success page
