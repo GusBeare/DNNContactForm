@@ -107,6 +107,7 @@
     <Content Include="Documentation\Documentation.css" />
     <Content Include="Documentation\Documentation.html" />
     <Content Include="Edit.ascx" />
+    <Content Include="images\settings.jpg" />
     <Content Include="images\wilf.jpg" />
     <None Include="Included DLLs\DotNetNuke.dll" />
     <None Include="Included DLLs\DotNetNuke.Web.Client.dll" />
