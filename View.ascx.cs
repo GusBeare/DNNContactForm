@@ -54,7 +54,7 @@ namespace gus.Modules.DNNContactFormModule
                 var CallerAgent = HttpContext.Current.Request.UserAgent;
                 var CalledUrl = HttpContext.Current.Request.Url.OriginalString;
 
-
+                // #DEV add additional validation here, check email address.
                 // just make sure someone hasn't bypassed the in browser validation
                 if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(EnquirerEmail) || string.IsNullOrEmpty(comments) ||
                     string.IsNullOrEmpty(phone))
