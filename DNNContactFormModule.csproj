@@ -186,7 +186,7 @@
           <DevelopmentServerPort>0</DevelopmentServerPort>
           <DevelopmentServerVPath>
           </DevelopmentServerVPath>
-          <IISUrl>http://localhost</IISUrl>
+          <IISUrl>http://localhost:64258/</IISUrl>
           <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
           <IISAppRootUrl>http://dnndev.me</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
