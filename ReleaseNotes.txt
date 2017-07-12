@@ -1,6 +1,6 @@
 ﻿<h3>DNNContactFormModule</h3>
 <p class="Contributor">
-	CarawayDesign.com <br />
+	Caraway Design<br />
 	<a href="mailto:gus@carawaydesign.com">gus@carawaydesign.com</a><br />
 	<a href=http://www.carawaydesign.com/>http://www.carawaydesign.com/</a><br />
 </p>
@@ -8,7 +8,7 @@
 <div class="License">
 	<h3>About the DNNContactFormModule</h3>
 	<p class="Owner">
-		<b>Version CHANGEME</b><br /><br />
+		<b>Version 1.00.08</b><br /><br />
 	</p>
 
 	<p>Description about version.</p>
